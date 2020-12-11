@@ -5,6 +5,10 @@ require 'pry'
 
 #Test your code here
 
+lion = Animal.new("simba", "lion", "140")
 
-binding.pry
+bronx_zoo = Zoo.new("bronx zoo", "bronx")
+
+
+#binding.pry
 puts "done"
