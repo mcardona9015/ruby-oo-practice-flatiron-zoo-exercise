@@ -10,5 +10,5 @@ lion = Animal.new("simba", "lion", "140")
 bronx_zoo = Zoo.new("bronx zoo", "bronx")
 
 
-#binding.pry
+binding.pry
 puts "done"
