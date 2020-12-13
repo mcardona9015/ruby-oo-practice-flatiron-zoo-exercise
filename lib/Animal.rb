@@ -22,11 +22,19 @@ def zoo
        end
     end
     city_return
+
+    # City.all.select {|city| city.animal == self}.zoo
+
+
 end
 
 def city
     City.all.select {|city| city.animal == self}
 end
+
+# def species
+#     lion.sp
+# end
 
 
 end

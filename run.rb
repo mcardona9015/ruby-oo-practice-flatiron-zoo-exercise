@@ -17,7 +17,7 @@ london_zoo = Zoo.new("london zoo", "london")
 test1 = City.new(lion, "NYC", "USA", bronx_zoo)
 test2 = City.new(zebra, "London", "UK", london_zoo)
 
-lion.zoo
+# bronx_zoo.animals
 
 binding.pry
 puts "done"
