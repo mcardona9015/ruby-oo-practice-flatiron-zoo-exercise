@@ -16,7 +16,7 @@ class Zoo
     end
 
     def animals
-        binding.pry
+        # binding.pry
          Animal.all.select {|animal| animal.self}
     end
 
@@ -24,4 +24,4 @@ class Zoo
 
 end
 
-binding.pry
+# binding.pry

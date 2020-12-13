@@ -1,13 +1,12 @@
 class Animal
-attr_accessor :weight
-attr_reader :nickname, :species
+
+attr_reader :species, :country
 
 @@all = []
 
-def initialize(nickname, species, weight)
-    @nickname = nickname
-    @species = species
-    @weight = weight
+def initialize(species_param, country_param)
+    @species = species_param
+    @country = country_param    
     @@all << self
 end
 
@@ -15,7 +14,9 @@ def self.all
     @@all
 end
 
-
+def zoo
+    
+end
 
 end
 #test
