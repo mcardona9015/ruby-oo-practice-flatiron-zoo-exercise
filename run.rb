@@ -10,7 +10,7 @@ lion = Animal.new("lion", "Africa")
 zebra = Animal.new("zebra", "Africa")
 penguin = Animal.new("penguin", "Antarctica")
 
-bronx_zoo = Zoo.new("bronx zoo", "bronx")
+bronx_zoo = Zoo.new("bronx zoo", "NYC")
 queens_zoo = Zoo.new("queens zoo", "queens")
 london_zoo = Zoo.new("london zoo", "london")
 

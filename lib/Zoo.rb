@@ -37,6 +37,10 @@ class Zoo
         new_arr.uniq
     end
 
+    def cities
+        self.address
+    end
+
 # `Zoo#animals` should return all the animals that a specific instance of a zoo has.
 
 end

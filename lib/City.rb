@@ -19,4 +19,9 @@ class City
         @@all
     end
 
+    def country
+        self.origin
+    end
+
+
 end
