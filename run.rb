@@ -6,17 +6,18 @@ require 'pry'
 
 #Test your code here
 
-lion = Animal.new("simba", "lion", "140")
-zebra = Animal.new("arthur", "zebra", "220")
-penguin = Animal.new("happy", "penguin", "80")
+lion = Animal.new("lion", "Africa")
+zebra = Animal.new("zebra", "Africa")
+penguin = Animal.new("penguin", "Antarctica")
 
 bronx_zoo = Zoo.new("bronx zoo", "bronx")
 queens_zoo = Zoo.new("queens zoo", "queens")
-brooklyn_zoo = Zoo.new("brooklyn zoo", "brooklyn")
+london_zoo = Zoo.new("london zoo", "london")
 
-test1 = City.new("NYC", "USA")
-test2 = 
+test1 = City.new(lion, "NYC", "USA", bronx_zoo)
+test2 = City.new(zebra, "London", "UK", london_zoo)
 
+lion.zoo
 
 binding.pry
 puts "done"

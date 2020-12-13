@@ -15,8 +15,19 @@ def self.all
 end
 
 def zoo
-    
+    city_return = nil
+    City.all.each do |city| 
+       if city.animal == self
+         city_return = city.zoo
+       end
+    end
+    city_return
 end
+
+def city
+    City.all.select {|city| city.animal == self}
+end
+
 
 end
 #test
