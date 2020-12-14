@@ -6,16 +6,20 @@ require 'pry'
 
 #Test your code here
 
-lion = Animal.new("lion", "Africa")
-zebra = Animal.new("zebra", "Africa")
-penguin = Animal.new("penguin", "Antarctica")
+bronx_zoo = Zoo.new("bronx zoo", "54 park")
+queens_zoo = Zoo.new("queens zoo", "123 3rd st")
+london_zoo = Zoo.new("london zoo", "80 strand")
 
-bronx_zoo = Zoo.new("bronx zoo", "NYC")
-queens_zoo = Zoo.new("queens zoo", "queens")
-london_zoo = Zoo.new("london zoo", "london")
+nyc = City.new("NYC", "USA")
+london = City.new("London", "UK")
 
-test1 = City.new(lion, "NYC", "USA", bronx_zoo)
-test2 = City.new(zebra, "London", "UK", london_zoo)
+simba = Animal.new(bronx_zoo, nyc, "lion", "Africa")
+zeze = Animal.new(queens_zoo, nyc, "zebra", "Africa")
+happyfeet = Animal.new(london_zoo, london, "penguin", "Antarctica")
+
+
+
+
 
 # bronx_zoo.animals
 
