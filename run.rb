@@ -12,13 +12,15 @@ london_zoo = Zoo.new("london zoo", "80 strand")
 
 nyc = City.new("NYC", "USA")
 london = City.new("London", "UK")
+chicago = City.new("Chicago", "USA")
 
 simba = Animal.new(bronx_zoo, nyc, "lion", "Africa")
+scar = Animal.new(queens_zoo, nyc, "lion", "Africa")
 zeze = Animal.new(queens_zoo, nyc, "zebra", "Africa")
 happyfeet = Animal.new(london_zoo, london, "penguin", "Antarctica")
 
 
-
+# City.most_animals
 
 
 # bronx_zoo.animals
