@@ -45,10 +45,26 @@ class City
         self.all.select {|city_inst| city_inst.country == location}
     end
 
-    
+    # def self.animal_count       
+    # end
+
+    # def all_animals
+    #     Animal.all.select {|animal_inst| animal_inst.city == self}
+    # end
 
     def self.most_animals
-        binding.pry
+        # binding.pry
+        max_animals = 0
+        return_city = nil
+
+        City.all.each do |city_inst| 
+            if city_inst.all_animals.count >= max_animals
+                max_animals = city_inst.all_animals.count
+                return_city = city_inst
+            end
+        end
+        
+        return_city
         # 1. know the count of each animals in city
         # 2. compare each count from each city
         # 3.return the city that has the most

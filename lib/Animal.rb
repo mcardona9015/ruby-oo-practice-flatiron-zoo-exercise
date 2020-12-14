@@ -1,14 +1,14 @@
 class Animal
 
-    attr_reader :species, :country, :zoo, :city
+    attr_reader :species, :origin, :zoo, :city
 
     @@all = []
 
-    def initialize(zoo, city, species_param, country_param)
+    def initialize(zoo, city, species_param, origin_param)
         @zoo = zoo
         @city = city
         @species = species_param
-        @country = country_param    
+        @origin = origin_param    
         @@all << self
     end
 
@@ -16,10 +16,6 @@ class Animal
         @@all
     end
 
-
-# def species
-#     lion.sp
-# end
 end
 
 
