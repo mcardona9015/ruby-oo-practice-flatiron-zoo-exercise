@@ -18,27 +18,41 @@ class Zoo
 
     def animals
         # binding.pry
-        new_arr = []
-         Animal.all.each do |animal|
-            if animal.zoo == self
-                new_arr << animal.species
-            end
-         end
-         new_arr.uniq
+        Animal.all.select {|animal_inst|animal_inst.zoo == self}.uniq #added
+        # new_arr = []
+        #  Animal.all.each do |animal|
+        #     if animal.zoo == self
+        #         new_arr << animal.species
+        #     end
+        #  end
+        #  new_arr.uniq
     end
 
-    def self.find_by_city(city)
-        new_arr = []
-        City.all.each do |cities|
-            if cities.name == city 
-                new_arr << cities.zoo
+    def self.find_by_city(city) #new
+        return_zoos = []
+        Animal.all.select do |animal_inst| 
+            if animal_inst.city.name == city
+                return_zoos << animal_inst.zoo
             end
         end
-        new_arr.uniq
+        return_zoos.uniq
+        # new_arr = []
+        # City.all.each do |cities|
+        #     if cities.name == city 
+        #         new_arr << cities.zoo
+        #     end
+        # end
+        # new_arr.uniq
     end
 
-    def cities
-        self.address
+    def cities #new
+        return_cities = []
+        Animal.all.each do |animal_inst|
+             if animal_inst.zoo == self
+                return_cities << animal_inst.city
+             end
+        end
+        return_cities.uniq
     end
 
 # `Zoo#animals` should return all the animals that a specific instance of a zoo has.

@@ -21,7 +21,7 @@ class City
     end
 
     def zoos
-        self.all_animals.map(&:zoo)
+        self.all_animals.map(&:zoo).uniq #added uniq 
         # self.all_animals.map {|animal_ins| animal_ins.zoo}
     end
 
@@ -34,7 +34,6 @@ class City
     end
 
     def self.find_by_country(location)
-        loc_arr = []
 
         # 1. take in location
         # 2. iterate through all of the city we have
@@ -69,8 +68,6 @@ class City
         # 2. compare each count from each city
         # 3.return the city that has the most
 
-        # self.all.select{|city_inst| city_inst.}
-        # self.all_animals.count
     end
 
 end
