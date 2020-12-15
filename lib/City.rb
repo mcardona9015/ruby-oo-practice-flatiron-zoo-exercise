@@ -24,15 +24,19 @@ class City
         self.all_animals.map(&:zoo).uniq #added uniq 
         # self.all_animals.map {|animal_ins| animal_ins.zoo}
     end
+    # `City#zoos` should return all the zoos that a specific instance of a city has.
 
     def animals
-        Animal.all.map(&:species).uniq
+        self.all_animals.map(&:species).uniq
     end
+    # `City#animals` should return all the unique animal species
+    #  that a specific instance of a city has.
 
     def animal_number
         self.animals.count 
     end
-
+    # - `City#animal_number` should return an integer that indicates 
+    # the number of different animal species a city has in total.
     def self.find_by_country(location)
 
         # 1. take in location
