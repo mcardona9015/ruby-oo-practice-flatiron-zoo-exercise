@@ -53,17 +53,19 @@ class City
 
     def self.most_animals
         # binding.pry
-        max_animals = 0
-        return_city = nil
+        # max_animals = 0
+        # return_city = nil
 
-        City.all.each do |city_inst| 
-            if city_inst.all_animals.count >= max_animals
-                max_animals = city_inst.all_animals.count
-                return_city = city_inst
-            end
-        end
+        # City.all.each do |city_inst| 
+        #     if city_inst.all_animals.count >= max_animals
+        #         max_animals = city_inst.all_animals.count
+        #         return_city = city_inst
+        #     end
+        # end
         
-        return_city
+        # return_city
+
+        self.all.max {|city_inst1, city_inst2| city_inst1.all_animals.count <=> city_inst2.all_animals.count}
         # 1. know the count of each animals in city
         # 2. compare each count from each city
         # 3.return the city that has the most
