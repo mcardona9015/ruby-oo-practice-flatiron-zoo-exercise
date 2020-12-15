@@ -18,7 +18,7 @@ class Zoo
 
     def animals
         # binding.pry
-        Animal.all.select {|animal_inst|animal_inst.zoo == self}.uniq #added
+        Animal.all.select {|animal_inst|animal_inst.zoo == self}.map(&:species).uniq #added
         # new_arr = []
         #  Animal.all.each do |animal|
         #     if animal.zoo == self
@@ -46,16 +46,21 @@ class Zoo
     end
 
     def cities #new
-        return_cities = []
-        Animal.all.each do |animal_inst|
-             if animal_inst.zoo == self
-                return_cities << animal_inst.city
-             end
-        end
-        return_cities.uniq
+        # return_cities = []
+        # Animal.all.each do |animal_inst|
+        #      if animal_inst.zoo == self
+        #         return_cities << animal_inst.city
+        #      end
+        # end
+        # return_cities.uniq
+
+        # return_cities = []
+        Animal.all.select {|animal_inst| animal_inst.zoo == self}.map(&:city).uniq
+
     end
 
 # `Zoo#animals` should return all the animals that a specific instance of a zoo has.
+# ties into the cities so we dont really need address
 
 end
 
