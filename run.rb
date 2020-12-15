@@ -15,6 +15,7 @@ london = City.new("London", "UK")
 chicago = City.new("Chicago", "USA")
 
 simba = Animal.new(bronx_zoo, nyc, "lion", "Africa")
+nala = Animal.new(bronx_zoo, chicago, "lion", "Africa" )
 scar = Animal.new(queens_zoo, nyc, "lion", "Africa")
 zeze = Animal.new(queens_zoo, nyc, "zebra", "Africa")
 happyfeet = Animal.new(london_zoo, london, "penguin", "Antarctica")
